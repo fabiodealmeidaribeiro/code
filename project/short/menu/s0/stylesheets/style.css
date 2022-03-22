@@ -1,0 +1,64 @@
+:root
+{
+    --diameter : 50px;
+    --margin : 10px;
+    --mode : ease-in-out;
+    --time : .25s;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+ul, li { margin: 0; padding: 0; }
+
+.wrap
+{
+    align-items: center;
+    background-color: #000;
+    clip-path: circle(calc(var(--diameter) / 2) at calc(100% - var(--diameter) + var(--diameter) / 2 - var(--margin)) calc(var(--diameter) - var(--diameter) / 2 + var(--margin)));
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: fixed;
+    transition: all var(--time) var(--mode);
+    width: 100%;
+}
+
+.wrap ul { list-style: none; text-align: center; }
+
+.wrap ul li a
+{
+    color: #333;
+    font-size: calc(var(--diameter) / 2);
+    font-weight: 100;
+    line-height: calc(var(--diameter) / 2);
+    text-decoration: none;
+    transition: var(--time) var(--mode);
+}
+
+.wrap ul li a:hover { color: #fff; }
+
+.btn
+{
+    align-items: center;
+    background-color: #000;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: calc(var(--diameter) / 2);
+    height: var(--diameter);
+    justify-content: center;
+    position: absolute;
+    right: var(--margin);
+    top: var(--margin);
+    transition: all var(--time) var(--mode);
+    width: var(--diameter);
+    z-index: 2;
+}
+
+.btn:hover { color: #000; background-color: #fff; }
+#active:checked ~ .wrap { clip-path: circle(100%); }
+#active:checked ~ .btn { color: #fff; background-color: #f00; }
+#active:checked ~ .btn i::before { content: '\f00d'; }
+input { display: none; }
+
+
+#item:checked ~ .wrap { clip-path: circle(100%); }

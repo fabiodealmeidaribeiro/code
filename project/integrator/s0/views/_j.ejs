@@ -1,0 +1,39 @@
+<%- include('./partials/header'); %>
+    <form>
+        <!--  -->
+        <div class="row">
+            <div class="col">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <label for="state">State</label>
+                <select id="state">
+                    <option selected disabled></option>
+                    <option>SP</option>
+                    <option>PE</option>
+                    <option>RJ</option>
+                </select>
+                <label for="email">Email</label>
+                <input type="email" id="email">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="3"></textarea>
+            </div>
+        </div>
+        <!--  -->
+        <div class="row">
+            <div class="col">
+                <div id="error-list" hidden></div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="row">
+            <div class="col">
+                <div id="footer-menu">
+                    <button type="submit">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+    </form>
+<%- include('./partials/footer'); %>

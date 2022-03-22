@@ -1,0 +1,34 @@
+.caption
+{
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  transition: opacity 0.125s ease-in;
+  width: 100%;
+}
+
+/*
+  ease
+  ease-in
+  ease-out
+  ease-in-out
+  linear
+  cubic-bezier
+*/
+
+.light-box:hover .caption
+{
+  opacity: 1;
+}
+
+.light-box
+{
+  position: relative;
+  display: block;
+}

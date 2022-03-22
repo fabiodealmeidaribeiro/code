@@ -1,0 +1,71 @@
+[
+    {
+        "department": {
+            "title": "bessa lavanderia",
+            "description": "description"
+        },
+        "contact": {
+            "email": [
+                "lavanderia@bessahostel.com.br",
+                "lavanderia@bessahostel.com.br",
+                "lavanderia@bessahostel.com.br"
+            ],
+            "phone": [
+                "11940058153",
+                "11940058153",
+                "11940058153"
+            ]
+        },
+        "attendance": [
+            {
+                "daylong": true,
+                "weekday": "domingo",
+                "open": "07:00",
+                "close": "15:00",
+                "disable": true
+            },
+            {
+                "daylong": false,
+                "weekday": "segunda-feira",
+                "open": "07:00",
+                "close": "15:00",
+                "disable": true
+            },
+            {
+                "daylong": false,
+                "weekday": "terça-feira",
+                "open": "07:00",
+                "close": "15:00",
+                "disable": false
+            },
+            {
+                "daylong": false,
+                "weekday": "quarta-feira",
+                "open": "07:00",
+                "close": "15:00",
+                "disable": true
+            },
+            {
+                "daylong": false,
+                "weekday": "quinta-feira",
+                "open": "07:00",
+                "close": "15:00",
+                "disable": false
+            },
+            {
+                "daylong": false,
+                "weekday": "sexta-feira",
+                "open": "07:00",
+                "close": "15:00",
+                "disable": true
+            },
+            {
+                "daylong": true,
+                "weekday": "sábado",
+                "open": "07:00",
+                "close": "15:00",
+                "disable": true
+            }
+        ]
+    }
+]

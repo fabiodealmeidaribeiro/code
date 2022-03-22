@@ -1,0 +1,46 @@
+section {
+  justify-content: center;
+}
+
+main h1 {
+  font-size: 38px;
+}
+
+main p { 
+  font-size: 22px;
+  text-align: center;
+}
+
+.form-contact label {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.form-column-m-10 {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.form-inline { 
+  display: flex;
+}
+
+.form-inline input {
+  height: 20px;
+  width: 300px;
+}
+
+form textarea { 
+  resize: none;
+  width: 635px;
+}
+
+.form-contact button {
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #ffb90f;
+}

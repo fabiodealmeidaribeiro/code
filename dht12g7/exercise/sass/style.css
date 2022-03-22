@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #000;
+}
+
+p {
+  font: 12px / 36px;
+  margin: 20px 0;
+  width: 666.66667%;
+  width: 667px;
+  width: 1;
+  padding: 10px, 20px;
+}
+
+nav {
+  width: 100%;
+  background-color: #000;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  color: #fff;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+nav a {
+  color: red;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+aside {
+  width: 300px;
+}
+
+section {
+  font-family: "Lucida Grande";
+  font-weight: bold;
+}
+
+p.destaque {
+  border-color: blue;
+}
+
+.msg, .msg-erro, .msg-alert {
+  border: 1px solid;
+  padding: 0px;
+  text-align: center;
+}
+
+.msg-erro {
+  border-color: #f00;
+  border-radius: 5px;
+  color: #000;
+}
+
+.msg-alert {
+  border-color: #f00;
+  border-radius: 5px;
+  color: #121212;
+  background-color: rgba(3, 3, 3, 0.5);
+}
+
+p:before {
+  content: "Eu tenho 7 moedas.";
+}
+
+p:before {
+  content: "Eu tenho  moedas.";
+}
+
+.content, .content-top, .content-bottom {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+p {
+  font-size: 10px;
+  font-weight: 12px;
+  color: #000;
+}
+
+h1 {
+  font-size: 12px;
+  font-weight: 24px;
+  color: #000;
+}
+
+div.last {
+  background: black;
+  background: black;
+  font-family: "";
+  padding: 0;
+  font-family: "";
+  font-family: "";
+  width: 400%;
+  margin: 0;
+  margin: 3px;
+  margin: 2px;
+}
+
+div {
+  width: 40%;
+  margin: 0 auto 10px 300px;
+  position: relative;
+}
+
+div {
+  display: block;
+  margin: 0 auto;
+}
+
+section {
+  display: block;
+  margin: 0 auto;
+}
+
+div, section {
+  display: block;
+  margin: 0 auto;
+}
+
+header {
+  font-size: 10px;
+  font-weight: 12px;
+  background: #000;
+  color: #fff;
+}
+
+.item-1, .item-2, .item-3, .icon-one, .icon-two, .icon-three, .icon-fuor {
+  margin: 0 auto;
+}
+
+.item-1 {
+  width: 2px;
+}
+
+.item-2 {
+  width: 4px;
+}
+
+.item-3 {
+  width: 6px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  color: black;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 360;
+  line-height: 36px;
+  color: #191919;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 320;
+  line-height: 32px;
+  color: #323232;
+}
+
+h4 {
+  font-size: 28px;
+  font-weight: 280;
+  line-height: 28px;
+  color: #4b4b4b;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 240;
+  line-height: 24px;
+  color: #646464;
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 20px;
+  color: #7d7d7d;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 20px;
+  color: #7d7d7d;
+}
+
+.item-1 {
+  width: 2px;
+}
+
+.item-2 {
+  width: 4px;
+}
+
+.icon-one {
+  background-image: url("/img/one.png");
+}
+
+.icon-two {
+  background-image: url("/img/two.png");
+}
+
+.icon-three {
+  background-image: url("/img/three.png");
+}
+
+.icon-fuor {
+  background-image: url("/img/fuor.png");
+}
+
+.sidebar {
+  width: 30%;
+}
+
+@media screen and (orientation: landscape) {
+  .sidebar {
+    width: 40%;
+  }
+}
+
+header {
+  padding: 3em;
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 2em;
+  }
+}
+
+.div {
+  font-family: 'Oswald', sans-serif;
+}

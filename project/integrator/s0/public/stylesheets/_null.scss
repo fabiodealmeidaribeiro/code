@@ -1,0 +1,15 @@
+%margin
+{
+    margin: 0;
+}
+
+%padding
+{
+    padding: 0;
+}
+
+%everything
+{
+    @extend %margin;
+    @extend %padding;
+}

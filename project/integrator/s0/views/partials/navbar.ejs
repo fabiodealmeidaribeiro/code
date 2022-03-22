@@ -1,0 +1,17 @@
+<% if (typeof isUserSession === 'undefined') { } else { %>
+  <%
+    let isUserData = '';
+    isUserData += getValidation(isUserSession['id']) ? '<p>' + getFirstUpperCase(isUserSession['id']) + '</p>' : '';
+    isUserData += getValidation(isUserSession['title']) ? '<p>' + getFirstUpperCase(isUserSession['title']) + '</p>' : '';
+    isUserData += getValidation(isUserSession['accesskey']) ? '<p>' + getFirstUpperCase(isUserSession['accesskey']) + '</p>' : '';
+    isUserData += getValidation(isUserSession['phone']) ? '<p>' + getFirstUpperCase(isUserSession['phone']) + '</p>' : ''; 
+  %>
+  <div id="content"><%- isUserData; %></div>
+<% } %>
+<%- bootstrapNavbar({
+  key : typeof key !== 'undefined' ? key : undefined,
+  searchAction : typeof isSearchAction !== 'undefined' ? isSearchAction : undefined,
+  array : isNavbar,
+}); %>
+<%- typeof isPageTitle !== 'undefined' ? '<h1>' + getFirstUpperCase(isPageTitle) + '</h1>' : ''; %>
+<div id="content">

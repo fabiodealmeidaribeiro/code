@@ -1,0 +1,44 @@
+{
+    "development": {
+        "dialect": "mysql",
+        "database": "api",
+        "host": "localhost",
+        "password": "",
+        "port": 8080,
+        "username": "root",
+        "operatorAliases": false,
+        "define": {
+            "timestamp": true,
+            "underscored": false,
+            "underscoredAll": false
+        }
+    },
+    "test": {
+        "dialect": "mysql",
+        "database": "api",
+        "host": "localhost",
+        "password": "",
+        "port": 8080,
+        "username": "root",
+        "operatorAliases": false,
+        "define": {
+            "timestamp": true,
+            "underscored": false,
+            "underscoredAll": false
+        }
+    },
+    "production": {
+        "dialect": "mysql",
+        "database": "api",
+        "host": "localhost",
+        "password": "",
+        "port": 8080,
+        "username": "root",
+        "operatorAliases": false,
+        "define": {
+            "timestamp": true,
+            "underscored": false,
+            "underscoredAll": false
+        }
+    }
+}

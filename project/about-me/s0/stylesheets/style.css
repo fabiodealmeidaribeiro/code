@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --width-sidebar: 15rem;
+
+  --sidebar-width-start : 0;
+  --sidebar-width-end : 15rem;
+
+  --container-width-start : 0;
+  --container-width-end : 0;
+
+
+  --height-min-sidebar: 61.6px;
+  --height-max-sidebar: 61.6px;
+}
+
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a
+{
+  color: #666;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+  font-family: "Saira Extra Condensed";
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h1
+{
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6
+{
+  font-size: 2rem;
+}
+
+h2
+{
+  font-weight: 400;
+}
+
+h3,
+h4,
+h5,
+h6
+{
+  font-weight: 200;
+}
+
+#navbar-image
+{
+  width: 150px;
+  height: 150px;
+}
+
+#photo
+{
+  background-attachment: scroll;
+  background-image: url(../images/image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 576px) and (min-width: 768px) {
+
+  #sidebar
+  {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  #container
+  {
+    margin-top: var(--height-min-sidebar);
+    width: 100%;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  #sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: var(--width-sidebar);
+  }
+  #container
+  {
+    margin: 0 0 0 var(--width-sidebar);
+    width: calc(100% - var(--width-sidebar));
+  }
+  #navbar-responsive
+  {
+    align-items: center;
+    display: flex;
+    flex-grow: 0;
+    width: 100vw;
+  }
+  #navbar-nav
+  {
+    flex-direction: column;
+    width: 100vw;
+  }
+}

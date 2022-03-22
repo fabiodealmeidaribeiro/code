@@ -1,0 +1,2027 @@
+<script>
+    document.getElementById("demo").innerHTML = "Hello JavaScript";
+</script>
+
+<!-- ----- -->
+
+<img id="img" src="off.gif">
+<button onclick="document.getElementById('img').src='on.gif'">On</button>
+<button onclick="document.getElementById('img').src='off.gif'">Off</button>
+
+<!-- ----- -->
+
+<script>
+    let myFunction = (element) => { document.getElementById(element).innerHTML = "Paragraph changed."; }
+</script>
+<p id="demo">A Paragraph.</p>
+<button type="button" onclick="myFunction('demo');">Try it</button>
+
+<!-- ----- -->
+
+<button type="button" onclick="document.getElementById('demo').style.fontSize = '35px';">Click Me!</button>
+
+<button type="button" onclick="document.getElementById('demo').style.display = 'block';">Click Me!</button>
+ 
+<button type="button" onclick="document.getElementById('demo').style.display = 'none';">Click Me!</button>
+
+<!-- ----- -->
+
+<script>
+    window.alert(5 + 6);
+</script>
+
+<!-- ----- -->
+
+<script>
+    console.log(5 + 6);
+</script>
+
+<!-- ----- -->
+
+<button onclick="window.print();">Print this page</button>
+
+<!-- ----- -->
+
+<script>
+    let a, b, c;
+    a = 5;
+    b = 6;
+    c = a + b;
+    document.getElementById("demo").innerHTML = c;
+</script>
+
+<!-- ----- -->
+
+<script>
+    let person = "John Doe", carName = "Volvo", price = 200;
+    document.getElementById("demo").innerHTML = carName;
+</script>
+
+<!-- ----- -->
+ 
+<script>
+    let celsius = (fahrenheit) => { return (fahrenheit - 32) * 5 / 9; }
+    document.getElementById("demo").innerHTML = celsius(5);
+    let fahrenheit = (celsius) => { return celsius * 9 / 5 + 32; }
+    document.getElementById("demo").innerHTML = fahrenheit(5);
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let person = {
+        firstname : "John",
+        lastname : "Doe",
+        age : 50,
+        eyecolor : "blue"
+    };
+    let content = person.firstName;
+    content += ' ';
+    content += person.lastName;
+    content += ' ';
+    content += 'is';
+    content += ' ';
+    content += person['age'];
+    content += ' ';
+    content += 'years old';
+    content += ' ';
+    content += 'and';
+    content += ' ';
+    content += 'he';
+    content += ' ';
+    content += 'has';
+    content += ' ';
+    content += person.eyeColor;
+    content += ' ';
+    content += 'eyes.';
+    document.getElementById("demo").innerHTML = content;
+    let person = {
+        firstname : "John",
+        lastname : "Doe",
+        fullname : () => {
+            let content = this.firstname;
+            content += ' ';
+            content += this['lastname'];
+            content += ' ';
+            return content;
+        },
+    };
+    document.getElementById("demo").innerHTML = person['fullname'];
+</script>
+
+<!-- ----- -->
+
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let displaydate = (element) => { document.getElementById(element).innerHTML = Date(); }
+</script>
+<p id="demo"></p>
+<button onclick="displaydate('demo');">The time is?</button>
+
+<!-- ----- -->
+
+<script>
+    let str = "We are the so-called \"Vikings\" from the north.";
+    document.getElementById("demo").innerHTML = str; 
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    var x = "John";
+    var y = new String("John");
+    document.getElementById("demo").innerHTML = typeof x + " " + typeof y;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    document.getElementById("demo").innerHTML = str.length;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let str = "Please locate where 'locate' occurs!";
+    document.getElementById("demo").innerHTML = str.indexOf("locate");
+</script>
+
+<!-- ----- -->
+
+<script>
+    let str = "Please locate where 'locate' occurs!";
+    document.getElementById("demo").innerHTML = str.lastIndexOf("locate", 15);
+</script>
+
+<!-- ----- -->
+
+<script>
+    let str = "Apple, Banana, Kiwi";
+    document.getElementById("demo").innerHTML = str.slice(7, 10); 
+</script>
+
+<!-- ----- -->
+
+<script>
+    var str = "Apple, Banana, Kiwi";
+    document.getElementById("demo").innerHTML = str.slice(7);
+</script>
+
+<!-- ----- -->
+
+<script>
+    var str = "Apple, Banana, Kiwi";
+    document.getElementById("demo").innerHTML = str.substring(7, 13);
+</script>
+
+<!-- ----- -->
+
+<script>
+    var str = "Apple, Banana, Kiwi";
+    document.getElementById("demo").innerHTML = str.substr(7, 6);
+</script>
+
+<!-- ----- -->
+
+<script>
+    let myFunction = (element) => {
+        let str = document.getElementById(element).innerHTML; 
+        let txt = str.replace("Microsoft", "W3Schools");
+        document.getElementById(element).innerHTML = txt;
+    }
+</script>
+<p id="demo">Please visit Microsoft!</p>
+<button onclick="myFunction('demo');">Try it</button>
+
+<!-- Para substituir não diferencia maiúsculas de minúsculas, use uma expressão regular com um sinalizador / i (insensível): -->
+
+<script>
+    let myFunction = (element) => {
+        let str = document.getElementById(element).innerHTML; 
+        let txt = str.replace(/MICROSOFT/i, "W3Schools");
+        document.getElementById(element).innerHTML = txt;
+    }
+</script>
+<p id="demo">Please visit Microsoft!</p>
+<button onclick="myFunction('demo');">Try it</button>
+
+<!-- Para substituir todas as correspondências, use uma expressão regular com um sinalizador / g (correspondência global): -->
+
+<script>
+    let myFunction = (element) => {
+        let str = document.getElementById(element).innerHTML;
+        let txt = str.replace(/Microsoft/g, "W3Schools");
+        document.getElementById(element).innerHTML = txt;
+    }
+</script>
+<p id="demo">Please visit Microsoft and Microsoft!</p>
+<button onclick="myFunction('demo');">Try it</button>
+
+<!-- ----- -->
+
+<script>
+    let myFunction = (element) => {
+        var txt = document.getElementById(element).innerHTML;
+        document.getElementById(element).innerHTML = txt.toUpperCase();
+    }
+</script>
+<p id="demo">Hello World!</p>
+<button onclick="myFunction('demo');">Try it</button>
+
+<!-- ----- -->
+
+<script>
+    let myFunction = (element) => {
+        let txt = document.getElementById(element).innerHTML;
+        document.getElementById(element).innerHTML = txt.toLowerCase();
+    }
+</script>
+<p id="demo">Hello World!</p>
+<button onclick="myFunction('demo');">Try it</button>
+
+<!-- ----- -->
+
+<script>
+    let text1 = "Hello";
+    let text2 = "World!";
+    let text3 = text1.concat(' ', text2);
+    document.getElementById("demo").innerHTML = text3;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let myFunction = () => {
+        let str = "     Hello World!     ";
+        alert(str.trim());
+    }
+</script>
+<button onclick="myFunction();">Try it</button>
+
+<!-- ----- -->
+
+<script>
+    let str = "     Hello World!     ";
+    alert(str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, ''));
+</script>
+
+<!-- ----- -->
+
+<script>
+    if (!String.prototype.trim) {
+        String.prototype.trim = () => {
+            return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+        }
+    }
+    var str = "     Hello World!    ";
+    alert(str.trim());
+</script>
+
+<!-- ----- -->
+
+<script>
+    let str = "5";
+    document.getElementById("demo").innerHTML = str.padStart(4, 0);
+</script>
+
+<!-- ----- -->
+
+<script>
+    let str = "5";
+    document.getElementById("demo").innerHTML = str.padEnd(4, "S");
+</script>
+
+<!-- ----- -->
+
+<script>
+    let str = "HELLO WORLD";
+    document.getElementById("demo").innerHTML = str.charAt(0);
+</script>
+
+<!-- ----- -->
+
+<script>
+    var str = "HELLO WORLD";
+    document.getElementById("demo").innerHTML = str[0];
+</script>
+
+<!-- ----- -->
+
+<script>
+    let myFunction = (element) => {
+    let str = "a, b, c, d, e, f";
+    let arr = str.split(", ");
+        document.getElementById(element).innerHTML = arr[0];
+    }
+</script>
+<p id="demo"></p>
+<button onclick="myFunction()">Try it</button>
+
+<!-- ----- -->
+
+<script>
+    var str = "Hello";
+    var arr = str.split("");
+    var txt;
+    for (let i = 0; i < arr.length; i++) {
+        txt += arr[i] + "<br>"
+    }
+    document.getElementById("demo").innerHTML = txt;
+</script>
+<p id="demo"></p> 
+
+<!-- ----- -->
+
+<script>
+    let x = 100 / "Apple";
+    document.getElementById("demo").innerHTML = isNaN(x);
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let x = NaN;
+    document.getElementById("demo").innerHTML = typeof x;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    var myNumber = 2; 
+    var txt;
+    while (myNumber != Infinity) {
+        myNumber = myNumber * myNumber;
+        txt = txt + myNumber + "<br>";
+    }
+    document.getElementById("demo").innerHTML = txt;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let x = 0xFF;
+    document.getElementById("demo").innerHTML = x;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let x = 500;
+    let y = new Number(500);
+    document.getElementById("demo").innerHTML = (x == y);
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    var x = 9.656;
+    document.getElementById("demo").innerHTML = x.toExponential();
+    document.getElementById("demo").innerHTML = x.toExponential(2);
+    document.getElementById("demo").innerHTML = x.toExponential(4);
+    document.getElementById("demo").innerHTML = x.toExponential(6); 
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let x = 9.656;
+    document.getElementById("demo").innerHTML = x.toFixed(0);
+    document.getElementById("demo").innerHTML = x.toFixed(2);
+    document.getElementById("demo").innerHTML = x.toFixed(4);
+    document.getElementById("demo").innerHTML = x.toFixed(6);
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    var x = 9.656;
+    document.getElementById("demo").innerHTML = x.toPrecision(0);
+    document.getElementById("demo").innerHTML = x.toPrecision(2);
+    document.getElementById("demo").innerHTML = x.toPrecision(4);
+    document.getElementById("demo").innerHTML = x.toPrecision(6);
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    var x = new Date("2017-09-30");
+    document.getElementById("demo").innerHTML = Number(x); 
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    document.getElementById("demo").innerHTML = parseInt("10.33");  
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    document.getElementById("demo").innerHTML = parseFloat("10.33");  
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let x = Number.MAX_VALUE;
+    document.getElementById("demo").innerHTML = x;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let x = Number.MIN_VALUE;
+    document.getElementById("demo").innerHTML = x;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    var x = 1 / 0;
+    document.getElementById("demo").innerHTML = x;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    var x = Number.NEGATIVE_INFINITY;
+    document.getElementById("demo").innerHTML = x;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let x = - 1 / 0;
+    document.getElementById("demo").innerHTML = x;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    document.getElementById("demo").innerHTML = Number.NaN;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let cars = ["Saab", "Volvo", "BMW"];
+    let cars = new Array("Saab", "Volvo", "BMW");
+    document.getElementById("demo").innerHTML = cars;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let cars = ["Saab", "Volvo", "BMW"];
+    let cars = new Array("Saab", "Volvo", "BMW");
+    document.getElementById("demo").innerHTML = cars[0];
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let person = { firstName : "John", lastName : "Doe", age : 46 };
+    document.getElementById("demo").innerHTML = person["firstName"];
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits.length;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits[fruits.length - 1];
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let text = "<ul>";
+    for (let i = 0; i <= fruits.length; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+    }
+    text += "</ul>";
+    document.getElementById("demo").innerHTML = text;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let myFunction = (value) => {
+        text += "<li>" + value + "</li>";
+    }
+    let text = "<ul>";
+    fruits.forEach(myFunction);
+    text += "</ul>";
+    document.getElementById("demo").innerHTML = text;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits;
+    let myFunction = (element) => {
+        fruits.push("Lemon");
+        document.getElementById(element).innerHTML = fruits;
+    }
+</script>
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+	let fruits = ["Banana", "Orange", "Apple", "Mango"];
+	document.getElementById("demo").innerHTML = fruits;
+    let myFunction = (element) => {
+  		fruits[fruits.length] = "Lemon";
+  		document.getElementById(element).innerHTML = fruits;
+	}
+</script>
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits[6] = "Lemon";
+    let text;
+    for (let i = 0; i <= fruits.length; i++) {
+        text += '<p>' + fruits[i] + '</p>';
+    }
+    document.getElementById("demo").innerHTML = text;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let person = [];
+    person[0] = "John";
+    person[1] = "Doe";
+    person[2] = 46; 
+    document.getElementById("demo").innerHTML = person[0] + ' ' + person.length;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = typeof fruits;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = Array.isArray(fruits);
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = isArray(fruits);
+    let isArray = (myArray) => {
+        return myArray.constructor.toString().indexOf("Array") > - 1;
+    }
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits instanceof Array;
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits.toString();
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits.join(" * ");
+</script>
+<p id="demo"></p>
+
+<!-- ----- -->
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = fruits;
+    fruits.pop();
+    document.getElementById("demo2").innerHTML = fruits;
+</script>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<!-- ----- -->
+
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = fruits;
+    document.getElementById("demo2").innerHTML = fruits.pop();
+    document.getElementById("demo3").innerHTML = fruits;
+</script>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits;
+    let myFunction = (element) => {
+        fruits.push("Kiwi");
+        document.getElementById(element).innerHTML = fruits;
+    }
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo1', 'demo2');">Try it</button>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = fruits;
+    document.getElementById("demo2").innerHTML = fruits.length;
+    let myFunction = (element1, element2) => {
+        document.getElementById(element2).innerHTML = fruits.push("Kiwi");
+        document.getElementById(element1).innerHTML = fruits;
+    }
+</script>
+
+<!-- ----- -->
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = fruits;
+    fruits.shift();
+    document.getElementById("demo2").innerHTML = fruits;
+</script>
+
+<!-- ----- -->
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = fruits;
+    document.getElementById("demo2").innerHTML = fruits.shift();
+    document.getElementById("demo3").innerHTML = fruits;
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits;
+    let myFunction = (element) => {
+        fruits.unshift("Lemon");
+        document.getElementById(element).innerHTML = fruits;
+    }
+</script>
+
+<!-- ----- -->
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = fruits;
+    document.getElementById("demo2").innerHTML = fruits.unshift("Lemon");
+    document.getElementById("demo3").innerHTML = fruits;
+</script>
+
+<!-- ----- -->
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo1").innerHTML = fruits;
+    fruits[0] = "Kiwi";
+    document.getElementById("demo2").innerHTML = fruits;
+</script>
+
+<!-- ----- -->
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+  let fruits = ["Banana", "Orange", "Apple", "Mango"];
+  document.getElementById("demo1").innerHTML = fruits[0];
+  delete fruits[0];
+  document.getElementById("demo2").innerHTML = fruits[0];
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo2');">Try it</button>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+  let fruits = ["Banana", "Orange", "Apple", "Mango"];
+  document.getElementById("demo1").innerHTML = fruits;
+  let myFunction = (element) => {
+    fruits.splice(2, 0, "Lemon", "Kiwi");
+    document.getElementById(element).innerHTML = fruits;
+  }
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo2', 'demo3');">Try it</button>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+  let fruits = ["Banana", "Orange", "Apple", "Mango"];
+  document.getElementById("demo1").innerHTML = fruits;
+  let myFunction = (element2, element3) => {
+      let removed = fruits.splice(2, 2, "Lemon", "Kiwi"); 
+      document.getElementById(element2).innerHTML = fruits;
+      document.getElementById(element3).innerHTML = removed; 
+  }
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits;
+    let myFunction = (element) => {
+        fruits.splice(0, 1);
+        document.getElementById(element).innerHTML = fruits;
+    }
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let myGirls = ["Cecilie", "Lone"];
+    let myBoys = ["Emil", "Tobias", "Linus"];
+    let myChildren = myGirls.concat(myBoys);
+    document.getElementById("demo").innerHTML = myChildren;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let arr1 = ["Cecilie", "Lone"];
+    let arr2 = ["Emil", "Tobias", "Linus"];
+    let arr3 = ["Robin", "Morgan"];
+    let myChildren = arr1.concat(arr2, arr3);
+    document.getElementById("demo").innerHTML = myChildren;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let arr1 = ["Emil", "Tobias", "Linus"];
+    let myChildren = arr1.concat("Peter"); 
+    document.getElementById("demo").innerHTML = myChildren;
+</script>
+
+<!-- ----- -->
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    let citrus = fruits.slice(1);
+    document.getElementById("demo1").innerHTML = fruits;
+    document.getElementById("demo2").innerHTML = citrus;
+</script>
+
+<!-- ----- -->
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    let citrus = fruits.slice(3);
+    document.getElementById("demo1").innerHTML = fruits;
+    document.getElementById("demo2").innerHTML = citrus;
+</script>
+
+<!-- ----- -->
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    let fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    let citrus = fruits.slice(1, 3);
+    document.getElementById("demo1").innerHTML = fruits;
+    document.getElementById("demo2").innerHTML = citrus;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits.toString();
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+	var fruits = ["Banana", "Orange", "Apple", "Mango"];
+	document.getElementById("demo").innerHTML = fruits;
+	let myFunction = (element) => {
+  		fruits.sort();
+  		document.getElementById(element).innerHTML = fruits;
+	}
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits;
+    let myFunction = (element) => {
+        fruits.sort();
+        fruits.reverse();
+        document.getElementById(element).innerHTML = fruits;
+    }
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+    let points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = points;
+    let myFunction = (element) => {
+        points.sort((a, b) => { return a - b});
+        document.getElementById(element).innerHTML = points;
+    }
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction1('demo');">Sort Alphabetically</button>
+<button onclick="myFunction2('demo');">Sort Numerically</button>
+<p id="demo"></p>
+<script>
+    let points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = points;
+    let myFunction1 = (element) => {
+        points.sort();
+        document.getElementById(element).innerHTML = points;
+    }
+    let myFunction2 = (element) => {
+        points.sort((a, b) => { return a - b });
+        document.getElementById(element).innerHTML = points;
+    }
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+    let points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = points;
+    let myFunction = (element) => {
+        points.sort((a, b) => { return 0.5 - Math.random() });
+        document.getElementById(element).innerHTML = points;
+    }
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+    let points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = points;  
+    let myFunction = (element) => {
+    let j, k;
+    for (let i = points.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * i);
+        k = points[i];
+        points[i] = points[j];
+        points[j] = k;
+    }
+    document.getElementById(element).innerHTML = points;
+    }
+</script>
+
+<!-- ----- -->
+
+<span id="demo"></span>
+<script>
+    var points = [40, 100, 1, 5, 25, 10];
+    points.sort((a, b) => { return a - b });
+    document.getElementById("demo").innerHTML = points[0];
+</script>
+
+<!-- ----- -->
+
+<span id="demo"></span>
+<script>
+    let points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = myArrayMax(points);
+    let myArrayMax = (arr) => {
+        let len = arr.length;
+        let max = - Infinity;
+        while (len--) {
+            if (arr[len] > max) {
+                max = arr[len];
+            }
+        }
+        return max;
+    }
+</script>
+
+<!-- ----- -->
+
+<span id="demo"></span>
+<script>
+    let points = [40, 100, 1, 5, 25, 10];
+    document.getElementById("demo").innerHTML = myArrayMin(points);
+    let myArrayMin = (arr) => {
+        let len = arr.length;
+        let min = Infinity;
+        while (len--) {
+            if (arr[len] < min) {
+                min = arr[len];
+            }
+        }
+    return min;
+    }
+</script>
+
+<!-- ----- -->
+
+<div id="demo"></div>
+<script>
+    var txt = '';
+    var numbers = [1, 2, 3, 4, 5];
+    numbers.forEach((value) => {
+        txt += '<p>' + value + '</p>'
+    });
+    document.getElementById("demo").innerHTML = txt;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let numbers1 = [1, 2, 3, 4, 5];
+    let numbers2 = numbers1.map((value) => {
+        return value + 1;
+    });
+    document.getElementById("demo").innerHTML = numbers2;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let numbers = [45, 4, 9, 16, 25];
+    let over18 = numbers.filter((value) => {
+        return value > 18
+    });
+    document.getElementById("demo").innerHTML = over18;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let numbers = [1, 2, 3, 4, 5];
+    let sum = numbers.reduce((total, value) => {
+        return total + value
+    });
+    document.getElementById("demo").innerHTML = sum;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+  let numbers = [45, 4, 9, 16, 25];
+  let sum = numbers.reduce((total, value) => {
+      return total + value
+    }, 100);
+  document.getElementById("demo").innerHTML = sum;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let numbers = [1, 2, 3, 4, 5];
+    let sum = numbers.reduceRight((total, value) => {
+        return total + value
+    });
+    document.getElementById("demo").innerHTML = sum;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let numbers = [1, 2, 3, 4, 5];
+    let sum = numbers.reduceRight((total, value) => {
+        return total + value
+    });
+    document.getElementById("demo").innerHTML = sum;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let numbers = [45, 4, 9, 16, 25];
+    let allOver18 = numbers.every((value) => {
+        return value > 18
+    });
+    document.getElementById("demo").innerHTML = allOver18;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let numbers = [1, 2, 3, 4, 5];
+    let someOver18 = numbers.some((value) => {
+        return value > 18
+    });
+    document.getElementById("demo").innerHTML = someOver18;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let fruits = ["Apple", "Orange", "Apple", "Mango"];
+    let a = fruits.indexOf("Apple");
+    document.getElementById("demo").innerHTML = a;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let fruits = ["Apple", "Orange", "Apple", "Mango"];
+    let a = fruits.lastIndexOf("Apple");
+    document.getElementById("demo").innerHTML = a + 1;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let numbers = [4, 9, 16, 25, 29];
+    let first = numbers.find((value) => {
+        return value > 18
+    });
+    document.getElementById("demo").innerHTML = first;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let numbers = [4, 9, 16, 25, 29];
+    let first = numbers.findIndex((value) => {
+        return value > 18
+    });
+    document.getElementById("demo").innerHTML = first;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let d = new Date(2018, 11, 24, 10, 33, 30, 0);
+    document.getElementById("demo").innerHTML = d;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let d = new Date();
+    document.getElementById("demo").innerHTML = d.toUTCString();
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let d = new Date();
+    document.getElementById("demo").innerHTML = d.toString();
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let d = new Date();
+    document.getElementById("demo").innerHTML = d.toDateString();
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let d = new Date();
+    document.getElementById("demo").innerHTML = d.toISOString();
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    var d = new Date("2015-03-25");
+    document.getElementById("demo").innerHTML = d;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let d = new Date("03/25/2015");
+    document.getElementById("demo").innerHTML = d;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let d = new Date();
+    let msec = Date.parse(d);
+    document.getElementById("demo").innerHTML = msec;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let d = new Date();
+    document.getElementById("demo").innerHTML = d.getTime();
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let d = new Date();
+    document.getElementById("demo").innerHTML = d.getFullYear();
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let d = new Date();
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    document.getElementById("demo").innerHTML = months[d.getMonth()];
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let d = new Date();
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    document.getElementById("demo").innerHTML = days[d.getDay()];
+</script>
+
+<!-- ----- -->
+
+<script>
+    Math.pow(8, 2);
+    Math.sqrt(64);
+    Math.abs(-4.7);
+    Math.ceil(4.4);
+    Math.floor(4.7);
+    Math.sin(90 * Math.PI / 180);
+    Math.cos(0 * Math.PI / 180);
+    Math.min(0, 150, 30, 20, -8, -200);
+    Math.max(0, 150, 30, 20, -8, -200);
+    Math.random();
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+    let myFunction = (element) => {
+        document.getElementById(element).innerHTML = Boolean(10 > 9);
+    }
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let x = 5;
+    document.getElementById("demo").innerHTML = x <= 8;
+</script>
+
+<!-- ----- -->
+
+<input id="age" value="18" />
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+    let myFunction = (element) => {
+        let age, voteable;
+        age = document.getElementById("age").value;
+        voteable = (age < 18) ? 'young' : 'old';
+        document.getElementById(element).innerHTML = voteable;
+    }
+</script>
+
+<!-- ----- -->
+
+<input id="age" value="18" />
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+let myFunction = (element) => {
+    let age, voteable;
+    age = Number(document.getElementById("age").value);
+    if (isNaN(age)) {
+        voteable = "Input is not a number";
+    } else {
+        voteable = (age < 18) ? 'young' : 'old';
+    }
+    document.getElementById(element).innerHTML = voteable;
+}
+</script>
+
+<!-- ----- -->
+
+<p id="demo">Good Evening!</p>
+<script>
+    document.getElementById("demo").innerHTML = new Date().getHours() < 18 ? 'Good day!' : 'Good Evening!';
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+let myFunction = (element) => {
+    let hour = new Date().getHours();
+    let greeting = hour < 18 ? 'Good day!' : 'Good evening!';
+    document.getElementById(element).innerHTML = greeting;
+}
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo"></p>
+<script>
+    let myFunction = (element) => {
+        let greeting;
+        let time = new Date().getHours();
+        if (time < 10) { greeting = 'Good morning!';
+        } else if (time < 20) { greeting = 'Good day!';
+        } else { greeting = 'Good evening!'; }
+        document.getElementById(element).innerHTML = greeting;
+    }
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    var day;
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+        break;
+        case 1:
+            day = "Monday";
+        break;
+        case 2:
+            day = "Tuesday";
+        break;
+        case 3:
+            day = "Wednesday";
+        break;
+        case 4:
+            day = "Thursday";
+        break;
+        case 5:
+            day = "Friday";
+        break;
+        case  6:
+            day = "Saturday";
+        break;
+    }
+    document.getElementById("demo").innerHTML = day;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    var text;
+    switch (new Date().getDay()) {
+        case 6:
+            text = "Today is Saturday";
+        break;
+        case 0:
+            text = "Today is Sunday";
+        break;
+        default:
+            text = "Looking forward to the Weekend";
+        break;
+    }
+    document.getElementById("demo").innerHTML = text;
+</script>
+
+<!-- ----- -->
+
+<div id="demo"></div>
+<script>
+    let text = '';
+    let cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+    for (let i = 0; i < cars.length; i++) { text += '<p>' + cars[i] + '</p>'; }
+    document.getElementById("demo").innerHTML = text;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let txt = '';
+    let person = { fname : "John", lname : "Doe", age : 25 };
+    for (let x in person) { txt += person[x] + ' '; }
+    document.getElementById("demo").innerHTML = txt;
+</script>
+
+<!-- ----- -->
+
+<script>
+    let cars = ["BMW", "Volvo", "Mini"];
+    let x;
+    for (x of cars) { document.write('<p>' + x + '</p>'); }
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let text = '';
+    let i = 1;
+    while (i <= 10) {
+        text += '<p>' + 'The number is ' + i + '.' + '</p>';
+        i++;
+    }
+    document.getElementById("demo").innerHTML = text;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let text = '';
+    let i = 0;
+    do { text += '<p>' + 'The number is ' + i + '.' + '<p>'; i++; } while (i <= 10);
+    document.getElementById("demo").innerHTML = text;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let cars = ["BMW", "Volvo", "Saab", "Ford"];
+    let i = 0;
+    let text = '';
+    while (cars[i]) { text += '<p>' + cars[i] + '</p>'; i++; }
+    document.getElementById("demo").innerHTML = text;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    var text = '';
+    for (let i = 0; i <= 10; i++) {
+        if (3 <= i) {
+            break;
+        } else { 
+            text += '<p>' + 'The number is ' + i + '.' + '</p>';
+        }
+    }
+    document.getElementById("demo").innerHTML = text;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let text = '';
+    for (let i = 0; i <= 10; i++) {
+        if (i <= 3) {
+            continue;
+        } else {
+            text += '<p>' + 'The number is ' + i + '.' + '</p>';
+        }
+    }
+    document.getElementById("demo").innerHTML = text;
+</script>
+
+<!-- ----- -->
+
+<div id="demo"></div>
+<script>
+    let content = '';
+    content += '<p>' + typeof "john" + '</p>';
+    content += '<p>' + typeof 3.14 + '</p>';
+    content += '<p>' + typeof NaN + '</p>';
+    document.getElementById("demo").innerHTML = content;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let isArray = (myArray) => {
+        return myArray.constructor.toString().indexOf("Array") > - 1;
+    }
+    document.getElementById("demo").innerHTML = isArray(fruits);
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let isArray = (myArray) => {
+        return myArray.constructor === Array;
+    }
+    document.getElementById("demo").innerHTML = isArray(fruits);
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let myDate = new Date();
+    let isDate = (myDate) => {
+        return myDate.constructor.toString().indexOf("Date") > -1;
+    }
+    document.getElementById("demo").innerHTML = isDate(myDate);
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let x = 123;
+    document.getElementById("demo").innerHTML = x.toString();
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    var str = "Visit W3Schools!"; 
+    var n = str.search("W3Schools");
+    document.getElementById("demo").innerHTML = n;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    var str = "Visit W3Schools!"; 
+    var n = str.search(/w3Schools/i);
+    document.getElementById("demo").innerHTML = n;
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo">Please visit Microsoft!</p>
+<script>
+    let myFunction = (element) => {
+        var str = document.getElementById(element).innerHTML; 
+        var txt = str.replace("Microsoft","W3Schools");
+        document.getElementById(element).innerHTML = txt;
+    }
+</script>
+
+<!-- ----- -->
+
+<!-- RegExp -->
+
+<p id="demo"></p>
+<script>
+    var str = "Visit W3Schools!"; 
+    var n = str.search(/w3Schools/i);
+    document.getElementById("demo").innerHTML = n;
+</script>
+
+<!-- ----- -->
+
+<button onclick="myFunction('demo');">Try it</button>
+<p id="demo">Please visit Microsoft!</p>
+<script>
+    let myFunction = (element) => {
+        var str = document.getElementById(element).innerHTML; 
+        var txt = str.replace("Microsoft","W3Schools");
+        document.getElementById(element).innerHTML = txt;
+    }
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    try {
+        adddlert("Welcome guest!");
+    }
+    catch(err) {
+        document.getElementById("demo").innerHTML = err.message;
+    }
+</script>
+
+<!-- ----- -->
+
+<input type="text" name="demo" id="demo" onblur="myFunction('demo');">
+<script>
+    let myFunction = (element) => {
+        let x = document.getElementById(element);
+        x.value = x.value.toUpperCase();
+    }
+</script>
+
+<!-- ----- -->
+
+<input id="req" type="text">
+<button type="button" onclick="myFunction('req', 'res');">Test Input</button>
+<p id="res">testing 1, 2, 3...</p>
+<script>
+    let myFunction = (request, response) => {
+        let x = document.getElementById(request).value;
+        let message = document.getElementById(response);
+        try {
+            if (x == "") throw 'empty!';
+            if (isNaN(x)) throw 'it is not a number!';
+            if (Number(x) <= 5) throw 'too low!';
+            if (10 <= Number(x)) throw 'too high!';
+        }
+        catch(err) {
+            message.innerHTML = err;
+        }
+        finally {
+            document.getElementById(request).value = '';
+        }
+    }
+    let cleaner = (element) => { document.getElementById(element).innerHTML = ''; }
+    cleaner('res');
+</script>
+
+<!-- ----- -->
+
+<p id="demo">
+<script>
+    var num = 1;
+    try { num.toPrecision(500); }
+    catch(err) { document.getElementById("demo").innerHTML = err.name; }
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let x;
+    try { x = y + 1; }
+    catch(err) { document.getElementById("demo").innerHTML = err.name; }
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p> 
+<script>
+    let num = 1;
+    try { num.toUpperCase(); }
+    catch(err) { document.getElementById("demo").innerHTML = err.name; }
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    try { decodeURI("%%%"); }
+    catch(err) { document.getElementById("demo").innerHTML = err.name; }
+</script>
+
+<!-- ----- -->
+
+<!-- JS Scope -->
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+    // let carName = 'Volvo';
+    let myFunction = (element) => {
+        let carName = 'Volvo';
+        document.getElementById(element).innerHTML = carName + ' => ' + typeof carName;
+    }
+    myFunction('demo1');  
+    document.getElementById("demo2").innerHTML = typeof carName;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let carName = 'Volvo';
+    let myFunction = (element) => {
+        document.getElementById(element).innerHTML = "I can display " + carName;
+    }
+    myFunction('demo');
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let myFunction = () => {
+        carName = "Volvo";
+    }
+    myFunction();
+    document.getElementById("demo").innerHTML = "I can display " + carName;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let carName = "Volvo";
+    document.getElementById("demo").innerHTML = "I can display " + window.carName;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    try {
+        carName = "Volvo";
+        let carName;
+        document.getElementById("demo").innerHTML = carName;
+    }
+    catch(err) {
+        document.getElementById("demo").innerHTML = err.name + ' => ' + err.message;
+    }
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let x = 3.14;
+    delete x;
+    document.getElementById("demo").innerHTML = x;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let obj = {};
+    Object.defineProperty(obj, "x", { value : 0, writable : false });
+    document.getElementById("demo").innerHTML = obj.x;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let obj = {
+        get x() { return 10 },
+        get y() { return 20 },
+    };
+    document.getElementById("demo").innerHTML = obj.y;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let obj = {
+        x : 10,
+        y : 20,
+    };
+    document.getElementById("demo").innerHTML = obj.y;
+</script>
+
+<!-- ----- -->
+
+<script>
+    let myFunction = () => { alert(this); }
+    myFunction();
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let person = {
+        firstName : 'John',
+        lastName : 'Doe',
+        fullName : function() {
+            return this.firstName + ' ' + this.lastName;
+        },
+    };
+    document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+<!-- ----- -->
+
+<button onclick="this.style.display='none';">Click to Remove Me!</button>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let person = {
+        firstName : "John",
+        lastName : "Doe",
+        id : 5566,
+        myFunction : function() {
+            return this.id;
+        }
+    };
+    document.getElementById("demo").innerHTML = person.myFunction();
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    var person = {
+        firstName : "John",
+        lastName : "Doe",
+    }
+    var engine = {
+        fullName : function() {
+            return this.firstName + ' ' + this.lastName;
+        }
+    }
+    var x = engine.fullName.call(person);
+    document.getElementById("demo").innerHTML = x;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let hello = () => { return "Hello World!" };
+    document.getElementById("demo").innerHTML = hello();
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let hello = (val) => "Hello " + val;
+    document.getElementById("demo").innerHTML = hello("Universe!");
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let hello = val => "Hello " + val;
+    document.getElementById("demo").innerHTML = hello("Universe!");
+</script>
+
+<!-- ----- -->
+
+<button id="btn">Click Me!</button>
+<p id="demo"></p>
+<script>
+    let hello = () => { document.getElementById("demo").innerHTML += this; }
+    window.addEventListener("load", hello);
+    document.getElementById("btn").addEventListener("click", hello);
+</script>
+
+<!-- ----- -->
+
+<!-- Uma classe JavaScript não é um objeto. É um modelo para objetos JavaScript. -->
+
+<p id="demo"></p>
+<script>
+    class Car {
+        constructor(name, year) {
+            this.name = name;
+            this.year = year;
+        }
+    }
+    myCar = new Car("Ford", 2014);
+    document.getElementById("demo").innerHTML = myCar.name + ' : ' + myCar.year;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    class Car {
+        constructor(name, year) {
+            this.name = name;
+            this.year = year;
+        }
+        age() {
+            let date = new Date();
+            return date.getFullYear() - this.year;
+        }
+    }
+    let myCar = new Car("Ford", 2014);
+    document.getElementById("demo").innerHTML = "My car is " + myCar.age() + " years old.";
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    class Car {
+        constructor(name, year) {
+            this.name = name;
+            this.year = year;
+        }
+        age(x) {
+            return x - this.year;
+        }
+    }
+    let date = new Date();
+    let year = date.getFullYear();
+    let myCar = new Car("Ford", 2014);
+    document.getElementById("demo").innerHTML = "My car is " + myCar.age(year) + " years old.";
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let x1 = {};
+    let x2 = "";
+    let x3 = 0;
+    let x4 = false;
+    let x5 = [];
+    let x6 = /()/;
+    let x7 = function(){};
+    document.getElementById("demo").innerHTML = typeof x7;
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let myFunction = (x, y) => {
+        if (y === undefined) {
+            y = 0;
+        }  
+        return x * y;
+    }
+    document.getElementById("demo").innerHTML = myFunction(4);
+</script>
+
+<!-- ----- -->
+
+<p id="demo"></p>
+<script>
+    let x = 10;
+    switch(x) { case 10 : alert("Hello"); }
+</script>
+
+<!-- ----- -->
+
+<script>
+    "use strict"
+    String.trim();
+    Array.isArray();
+    Array.forEach();
+    Array.map();
+    Array.filter();
+    Array.reduce();
+    Array.reduceRight();
+    Array.every();
+    Array.some();
+    Array.indexOf();
+    Array.lastIndexOf();
+    // Em seguida, use a função integrada do JavaScript JSON.parse()para converter a string em um objeto JavaScript:
+    JSON.parse();
+    JSON.stringify();
+    Date.now();
+</script>
+
+<!-- JS Forms -->
+
+<script>
+    // let e = document.geteById('fullname');
+    // e.value = 'Fábio';
+    // e.style.backgroundColor = 'red';
+    // e.style.color = 'white';
+    document.getElementById('btn').addEventListener("mouseover", () => {
+        document.getElementById('demo').innerHTML += "Moused over!<br>"
+    });
+    document.getElementById('btn').addEventListener("click", () => {
+        document.getElementById('demo').innerHTML += "Clicked!<br>"
+    });
+    document.getElementById('btn').addEventListener("mouseout", () => {
+        document.getElementById('demo').innerHTML += "Moused out!<br>"
+    });
+    // let random = (element) => {
+    //     document.getElementById(element).innerHTML = Math.random();
+    // }
+    // document.getElementById("div").addEventListener("mousemove", random('demo'));
+    // document.getElementById('btn').addEventListener("click", () => {
+    //     document.getElementById("div").removeEventListener("mousemove", random('demo'));
+    // });
+    // if (document.getElementById('btn').addEventListener) {
+    //     document.getElementById('btn').addEventListener("click", () => {
+    //         alert("Hello World!");
+    //     });
+    // };
+</script>

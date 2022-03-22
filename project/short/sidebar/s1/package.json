@@ -1,0 +1,21 @@
+{
+  "name": "s1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "scss": "sass --style=compressed --watch public/stylesheets:public/stylesheets"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.13"
+  },
+  "devDependencies": {
+    "sass": "^1.42.1"
+  }
+}

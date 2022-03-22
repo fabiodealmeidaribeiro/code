@@ -1,0 +1,51 @@
+<% if (typeof fullPage === 'undefined') { } else { %>
+    <nav id="pagination">
+        <ul>
+            <%
+                let URLPath = '?';
+                URLPath += typeof key !== 'undefined' ? key !== '' ? 'key=' + key + '&' : '' : '';
+                URLPath += 'page';
+                URLPath += '=';
+            %>
+            <% if (typeof prevPage === 'undefined') { } else { %>
+                <%
+                    let html = '';
+                    html += '<li>';
+                        let route = URLPath;
+                        route += Number(prevPage);
+                        html += '<a href=\"' + route + '\">';
+                            html += getFirstUpperCase('Previous');
+                        html += '</a>';
+                    html += '</li>';
+                %>
+                <%- html; %>
+            <% } %>
+            <% for (let i = 1; i <= Number(fullPage); i++) { %>
+                <%
+                    let html = '';
+                    html += '<li>';
+                        let route = URLPath;
+                        route += Number(i);
+                        html += '<a href=\"' + route + '\">';
+                            html += i;
+                        html += '</a>';
+                    html += '</li>';
+                %>
+                <%- html; %>
+            <% } %>
+            <% if (typeof nextPage === 'undefined') { } else { %>
+                <%
+                    html = '';
+                    html += '<li>';
+                        let route = URLPath;
+                        route += Number(nextPage);
+                        html += '<a href=\"' + route + '\">';
+                            html += getFirstUpperCase('Next');
+                        html += '</a>';
+                    html += '</li>';
+                %>
+                <%- html; %>
+            <% } %>
+        </ul>
+    </nav>
+<% } %>

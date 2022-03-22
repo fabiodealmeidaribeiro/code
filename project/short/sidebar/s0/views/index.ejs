@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%
+      array = [
+        { href : '#', title : 'Home', icon : 'home', },
+        { href : '#', title : 'User', icon : 'people', },
+        { href : '#', title : 'Messages', icon : 'document', },
+        { href : '#', title : 'Settings', icon : 'settings', },
+        { href : '#', title : 'Help', icon : 'help', },
+        { href : '#', title : 'Password', icon : 'keypad', },
+        { href : '#', title : 'Exit', icon : 'exit', },
+      ];
+    %>
+    <div id="navigation">
+      <ul>
+          <% for (let i = 0; i < array['length']; i++) { %>
+              <li id="list" class="<%- !i ? 'active' : '' %>">
+                  <a href=<%- array[i]['href']; %>>
+                      <span id="icon">
+                        <%- '<ion-icon name=\"' + array[i]['icon'] + '\"></ion-icon>'; %>
+                      </span>
+                      <span id="title">
+                        <%- array[i]['title']; %>
+                      </span>
+                  </a>
+              </li>
+          <% } %>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>

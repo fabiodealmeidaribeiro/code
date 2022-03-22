@@ -1,0 +1,11 @@
+$size : 42;
+
+@for $i from 1 through 6
+{
+    h#{ $i }
+    {
+        font-size: $size - ($i - 1) * ($size - $size / 2) / 5;
+        text-transform: capitalize;
+        @extend %everything;
+    }
+}

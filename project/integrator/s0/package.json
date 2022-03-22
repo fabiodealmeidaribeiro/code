@@ -1,0 +1,45 @@
+{
+  "name": "20200126",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "scss": "sass --style=compressed --watch public/stylesheets:public/stylesheets"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "bootstrap": "^5.0.1",
+    "bootstrap-icons": "^1.5.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.6.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.12.0",
+    "http-errors": "~1.6.3",
+    "lite-server": "^2.6.1",
+    "method-override": "^3.0.0",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.1",
+    "react-dom": "^17.0.2",
+    "sequelize": "^6.6.2",
+    "typescript": "^4.2.2",
+    "url-join": "^4.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.42.1",
+    "sequelize-cli": "^6.2.0"
+  },
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}

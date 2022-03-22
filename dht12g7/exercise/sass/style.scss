@@ -1,0 +1,448 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+%bg
+{
+    background-color: #000;
+}
+
+html
+{
+    @extend %bg;
+}
+
+body
+{
+    @extend %bg; 
+}
+
+@mixin padding ($values...)
+{
+    padding: $values;    
+}
+
+p
+{
+    $size: 12px;
+    $heigth: $size * 3;
+    font: #{ $size } / #{ $heigth };
+    margin: 20px 0;
+
+    $width : 1000%;
+    width: $width / 3 * 2;
+
+    $width : 1000px;
+    width: round($number: $width / 3 * 2);
+
+    width: round($number: 1.7) / 2;
+
+    @include padding(10px, 20px);
+}
+
+$width: 100%;
+$background: #000;
+$font-size: 1.2rem;
+$color: #fff;
+$border-style: solid 1px $color;
+
+nav
+{
+    width: $width;
+    background-color: $background;
+    ul
+    {
+        list-style: none;
+    }
+    li
+    {
+        color: $color;
+        display: inline-block;
+        font:
+        {
+            family: Arial;
+            size: $font-size;
+            weight: bold;
+        }
+    }
+    a
+    {
+        color: red;
+        &:hover
+        {
+            color: yellow;
+        }
+    }
+}
+
+$width-rem: 3.5rem;
+$width-px: 300px;
+$width: 300;
+
+aside
+{
+    width: $width-px;
+}
+
+$family: 'Lucida Grande';
+$weight: bold;
+
+section
+{
+    font:
+    {
+        family: $family;
+        weight: $weight;
+    }
+}
+
+$bg: #000;
+$color: red;
+$bg-nav: rgb(0, 0, 0);
+$bg-section: rgba(0, 0, 0, 0.7);
+
+$color: false;
+$color-dark: true;
+$color-ligth: null;
+
+$animals: puma, sea-slug, agret, salamander;
+$animals: puma sea-slug agret salamander;
+$animals: 'puma', 'sea-slug', 'agret', 'salamander';
+
+$margin: 10px 20px 10px 20px;
+
+$social:
+(
+    facebook: red,
+    flicker: black,
+    github: yellow,
+    googleplus: #fff,
+    instagram: #ccc
+);
+
+$class: destaque;
+$attr: border;
+p.#{ $class }
+{
+    #{ $attr }-color: blue;
+}
+
+$class: msg;
+
+.#{ $class }
+{
+    border: 1px solid;
+    padding: 0px;
+    text-align: center;
+}
+.#{ $class }-erro
+{
+    @extend .#{ $class };
+    border:
+    {
+        color: #f00;
+        radius: 5px;
+    }
+    color: #000;
+}
+.#{ $class }-alert
+{
+    @extend .#{ $class };
+    border:
+    {
+        color: #f00;
+        radius: 5px;
+    }
+    color: #101010 + #020202;
+    background-color: rgba(1, 1, 1, 0.5) + rgba(2, 2, 2, 0.5);
+}
+
+p:before
+{
+    content: 'Eu tenho #{ 2 + 5 } moedas.';
+}
+
+$value:  null;
+
+p:before
+{
+    content: 'Eu tenho #{ $value } moedas.';
+}
+
+@mixin border-radius ($radius)
+{
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
+
+$class: content;
+
+.#{ $class }
+{
+    @include border-radius(10px);
+}
+
+.#{ $class }-top
+{
+    @extend .#{ $class };
+}
+
+.#{ $class }-bottom
+{
+    @extend .#{ $class };
+}
+
+@mixin font ($size, $weight, $color) 
+{
+    font:
+    {
+        size: $size;
+        weight: $weight;
+    }
+    color: $color;
+}
+
+p
+{
+    @include font(10px, 12px, #000);
+}
+
+@mixin title ($size, $weight, $color) 
+{
+    font:
+    {
+        size: $size;
+        weight: $weight;
+    }
+    color: $color;
+}
+
+h1
+{
+    @include title( $color: #000, $size: 12px, $weight: 24px);
+}
+
+div.last
+{
+    background: lighten($color: #000000, $amount: 0);
+    background: darken($color: #000000, $amount: 0);
+    font-family: quote($string: "");
+    font-weight: unquote($string: "");
+    padding: str-length($string: "");
+    font-family: to-lower-case($string: "");
+    font-family: to-upper-case($string: "");
+    width: percentage($number: str-length($string: "bold"));
+    margin: round($number: 0);
+    margin: ceil($number: 2.5px);
+    margin: floor($number: 2.5px);
+}
+
+@function fluid($object, $container) {
+    @return $object / $container * 100%;
+}
+
+@function center($object, $container) {
+    @return ($container - $object) / 2;
+}
+
+$o_width: 400px;
+$c_width: 1000px;
+
+div
+{
+    width: fluid($o_width, $c_width);
+    margin: 0 auto 10px center($o_width, $c_width);
+    position: relative;
+}
+
+@mixin center {
+    display: block;
+    margin: 0 auto;
+}
+
+div
+{
+    @include center;
+}
+
+section
+{
+    @include center;
+}
+
+%center
+{
+    display: block;
+    margin: 0 auto;
+}
+
+div
+{
+    @extend %center;
+}
+
+section
+{
+    @extend %center;   
+}
+
+$template: dark;
+
+header
+{
+    font:
+    {
+        size: 10px;
+        weight: 12px;
+    }
+    @if $template == dark
+    {
+        background: #000;
+        color: #fff;
+    }
+    @else if $template == ligth
+    {   
+        background: #fff;
+        color: #000;
+    }
+    @else
+    {
+        background: yellow;
+        color: red;
+    }
+}
+
+%margin
+{
+    margin: 0 auto;
+}
+
+@for $i from 1 through 3
+{
+    .item-#{ $i }
+    {
+        @extend %margin;
+        width: 2px * $i;
+    }
+}
+
+$s: 40;
+$w: $s * 10;
+$h: $s;
+$v: 25;
+$r: 0;
+$g: 0;
+$b: 0;
+
+@for $i from 1 through 6
+{
+    h#{ $i }
+    {
+        font-size: ($s - $s / 10 * ($i - 1))#{ px };
+        font-weight: ($w - $w / 10 * ($i - 1));
+        line-height: ($h - $h / 10 * ($i - 1))#{ px };
+        color: rgb($r + ($i - 1) * $v, $g + ($i - 1) * $v, $b + ($i - 1) * $v);
+    }
+    @if $i == 6
+    {
+        #{ p }
+        {
+            font-size: ($s - $s / 10 * ($i - 1))#{ px };
+            font-weight: ($w - $w / 10 * ($i - 1));
+            line-height: ($h - $h / 10 * ($i - 1))#{ px };
+            color: rgb($r + ($i - 1) * $v, $g + ($i - 1) * $v, $b + ($i - 1) * $v);
+        }
+    }
+}
+
+@for $i from 1 to 3
+{
+    .item-#{ $i }
+    {
+        @extend %margin;
+        width: 2px * $i;
+    }
+}
+
+$number:
+(
+    'one',
+    'two',
+    'three',
+    'fuor',
+);
+
+@each $var in $number
+{
+    .icon-#{ $var }
+    {
+        @extend %margin;
+        background-image: url('/img/#{ $var }.png');
+    }
+}
+
+.sidebar
+{
+    width: 30%;
+    @media screen and (orientation: landscape)
+    {
+        width: 40%;
+    }
+}
+
+$table: 768px;
+$desktop: 1024px;
+
+@mixin landscape
+{
+    @media screen and (orientation: landscape)
+    {
+        @content;
+    }   
+}
+
+@mixin tablet
+{
+    @media (min-width: #{ $table })
+    {
+        @content;
+    }
+}
+
+header
+{
+    padding: 3em;
+    @include tablet
+    {
+        padding: 2em;
+    }
+}
+
+@mixin  desktop
+{
+    @media (min-width: #{ $desktop })
+    {
+        @content;
+    }
+}
+
+// @import 'foo.css';
+// @import 'foo' min-width: 400px;
+// @import 'http://foo.com/bar';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+.div
+{
+    font-family: 'Oswald', sans-serif;
+}
+
+@import 'base.scss';
+@import 'button.scss';
+@import 'figure.scss';
+@import 'grid.scss';
+@import 'reset.scss';
+@import 'typography.scss';

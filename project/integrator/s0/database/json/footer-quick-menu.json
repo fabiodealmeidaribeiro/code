@@ -1,0 +1,38 @@
+[
+    {
+        "path": false,
+        "target": true,
+        "title": [
+            "delete",
+            "delete me"
+        ],
+        "toggle": true
+    },
+    {
+        "path": true,
+        "target": false,
+        "title": [
+            "edit",
+            "edit me"
+        ],
+        "toggle": false
+    },
+    {
+        "path": true,
+        "target": false,
+        "title": [
+            "on",
+            "see me"
+        ],
+        "toggle": false
+    },
+    {
+        "path": true,
+        "target": false,
+        "title": [
+            "in",
+            "see what inside me"
+        ],
+        "toggle": false
+    }
+]

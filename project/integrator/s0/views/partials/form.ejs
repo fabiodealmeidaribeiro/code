@@ -1,0 +1,149 @@
+<%
+    let isAlertHTMLTag = '';
+    isAlertHTMLTag += '<div id=\"alert\" hidden>';
+    isAlertHTMLTag += '<p>';
+    isAlertHTMLTag += '</p>';
+    isAlertHTMLTag += '</div>';
+    let getElementName = (string) => {
+        return typeof string === 'string' ? string : string[1];
+    };
+    let getLabelName = (string) => {
+        return typeof string === 'string' ? string : string[0];
+    };
+    let getLabelCreator = (array) => {
+        let result = '';
+        result += '<label for=\"' + toClean(getLabelName(array['name'])) + '\">';
+            result += '<p>' + getFirstUpperCase(getElementName(array['name'])) + '</p>';
+        result += '</label>';
+        return result;
+    };
+    let getSelectCreator = (array) => {
+        let html = getLabelCreator(array);
+        html += '<select';
+        html += getValidation(array['disabled']) ? ' disabled' : '';
+        html += ' id=\"' + toClean(getLabelName(array['name'])) + '\"';
+        html += ' name=\"' + toClean(getLabelName(array['name'])) + '\"';
+        html += '>';
+        if (typeof index === 'undefined') {
+            for (let i = 0; i < array['option']['length']; i++) {
+                let selected = !array['option'][i]['option'] ? ' selected' : '';
+                html += '<option value=\"' + array['option'][i]['option'] + '\"' + selected + '>';
+                    html += getFirstUpperCase(array['option'][i]['option']);
+                html += '</option>';
+            }
+        } else if (typeof index !== 'undefined') {
+            html += '<option value=\"' + index[getLabelName(array['name'])] + '\"' + 'selected' + '>';
+                html += index[getLabelName(array['name'])];
+            html += '</option>';
+            for (let i = 0; i < array['option']['length']; i++) {
+                html += '<option value=\"' + array['option'][i]['option'] + '\">';
+                    html += getFirstUpperCase(array['option'][i]['option']);
+                html += '</option>';
+            }
+        }
+        html += '</select>';
+        html += isAlertHTMLTag;
+        return html;
+    };
+    let getInputCreator = (array) => {
+        let html = '';
+        html += getLabelCreator(array);
+        if (array['type'] === 'checkbox') {
+            html += '<input class=\"form-check-input\"';
+            html += getValidation(array['disabled']) ? ' disabled' : '';
+            html += ' id=\"' + toClean(getLabelName(array['name'])) + '\"';
+            html += getValidation(array['maxlength']) ? ' maxlength=\"' + array['maxlength'] + '\"' : '';
+            html += ' name=\"' + toClean(getLabelName(array['name'])) + '\"';
+            html += getValidation(array['placeholder']) ? ' placeholder=\"' + getFirstUpperCase(getElementName(array['name'])) + '\"' : '';
+            html += getValidation(array['required']) ? ' required' : '';
+            html += ' type=\"' + toClean(array['type']) + '\"';
+            html += typeof index !== 'undefined'
+            ? index[getLabelName(array['name'])] !== null ? ' value=\"' + index[getLabelName(array['name'])] + '\"' : ''
+            : '';
+            html += '>';
+        } else if (array['type'] === 'date') {
+            html += '<input';
+            html += getValidation(array['disabled']) ? ' disabled' : '';
+            html += ' id=\"' + toClean(getLabelName(array['name'])) + '\"';
+            html += getValidation(array['maxlength']) ? ' maxlength=\"' + array['maxlength'] + '\"' : '';
+            html += ' name=\"' + toClean(getLabelName(array['name'])) + '\"';
+            html += getValidation(array['placeholder']) ? ' placeholder=\"' + getFirstUpperCase(getElementName(array['name'])) + '\"' : '';
+            html += getValidation(array['required']) ? ' required' : '';
+            html += ' type=\"' + toClean(array['type']) + '\"';
+            html += typeof index !== 'undefined'
+            ? index[getLabelName(array['name'])] !== null ? ' value=\"' + getDateFormat(index[getLabelName(array['name'])]) + '\"' : ''
+            : '';
+            html += '>';
+        } else {
+            html += '<input';
+            html += getValidation(array['disabled']) ? ' disabled' : '';
+            html += ' id=\"' + toClean(getLabelName(array['name'])) + '\"';
+            html += getValidation(array['maxlength']) ? ' maxlength=\"' + array['maxlength'] + '\"' : '';
+            html += ' name=\"' + toClean(getLabelName(array['name'])) + '\"';
+            html += getValidation(array['placeholder']) ? ' placeholder=\"' + getFirstUpperCase(getElementName(array['name'])) + '\"' : '';
+            html += getValidation(array['required']) ? ' required' : '';
+            html += ' type=\"' + toClean(array['type']) + '\"';
+            html += typeof index !== 'undefined'
+            ? index[getLabelName(array['name'])] !== null ? ' value=\"' + index[getLabelName(array['name'])] + '\"' : ''
+            : '';
+            html += '>';
+        }
+        html += isAlertHTMLTag;
+        return html;
+    }
+    let getTextareaCreator = (array) => {
+        let html = '';
+        html += getLabelCreator(array);
+        html += '<textarea';
+            html += getValidation(array['disabled']) ? ' disabled' : '';
+            html += ' name=\"' + toClean(getLabelName(array['name'])) + '\"';
+            html += getValidation(array['placeholder']) ? ' placeholder=\"' + getFirstUpperCase(getElementName(array['name'])) + '\"' : '';
+            html += getValidation(array['rows']) ? ' rows=\"' + array['rows'] + '\"' : '';
+        html += '>';
+        html += typeof index !== 'undefined'
+        ? index[getLabelName(array['name'])] !== null ? index[getLabelName(array['name'])] : ''
+        : '';
+        html += '</textarea>';
+        html += isAlertHTMLTag;
+        return html;
+    }
+    let isAction = getValidation(isFormAttribute['action'])
+    ? ' action=\"' + isFormAttribute['action'] + '\"' : '';
+    let isEnctype = getValidation(isFormAttribute['enctype'])
+    ? ' enctype=\"' + isFormAttribute['enctype'] + '\"' : '';
+    let isMethod = getValidation(isFormAttribute['method'])
+    ? ' method=\"' + isFormAttribute['method'] + '\"' : '';
+%>
+<%- '<form' + isAction + isEnctype + isMethod + '>'; %>
+    <%
+        let start = '', end = '';
+        start += '<div id=\"row\">';
+        start += '<div id=\"col\">';
+        start += '<div id=\"first-item\">';
+        end += '</div>';
+        end += '</div>';
+        end += '</div>';
+    %>
+    <% for (let i = 0; i < isFormElement['length']; i++) { %>
+        <% if (getValidation(isFormElement[i]['active'])) { %>
+            <%- isFormElement[i]['type'] === 'start' ? start : ''; %>
+            <%- isFormElement[i]['type'] === 'end' ? end : ''; %>
+            <%
+                let isHTMLTags = '';
+                isHTMLTags += '<' + isFormElement[i]['type'] + '>';
+                isHTMLTags += getFirstUpperCase(isFormElement[i]['name']);
+                isHTMLTags += '</' + isFormElement[i]['type'] + '>';
+            %> 
+            <%- isFormElement[i]['type'].substr(0, 1) === 'h' ? isHTMLTags : ''; %>
+            <%- isFormElement[i]['type'] === 'select' ? getSelectCreator(isFormElement[i]) : ''; %>
+            <%- isFormElement[i]['type'] === 'textarea' ? getTextareaCreator(isFormElement[i]) : ''; %>
+            <% for (let x = 0; x < isInputType['length']; x++) { %>
+                <% if (isFormElement[i]['type'] === isInputType[x]['option']) { %>
+                    <%- getInputCreator(isFormElement[i]);%>
+                <% } %>
+            <% } %>
+        <% } %>
+    <% } %>
+    <%- include('./error-list'); %>
+    <%- include('./quick-menu'); %>
+<%- '</form>'; %>

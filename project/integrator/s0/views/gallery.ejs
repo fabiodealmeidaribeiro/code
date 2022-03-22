@@ -1,0 +1,15 @@
+<%- include('./partials/header'); %>
+<%- bootstrapGallery({
+    array : isGallery,
+    id : 'gallery',
+    header : {
+        title : true,
+        description : true,
+    },
+    thumbnail : {
+        image : true,
+        title : true,
+        description : true,
+    },
+}); %>
+<%- include('./partials/footer'); %>

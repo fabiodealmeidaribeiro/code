@@ -1,0 +1,12 @@
+        <footer>
+            <%- startTagName([ { name : 'p', param : { id : 'signature', }, }, ]); %>
+            <%- endTagName([ { name : 'p' }, ]); %>
+            <%- startTagName([ { name : 'p', param : { id : 'timer', }, }, ]); %>
+            <%- endTagName([ { name : 'p' }, ]); %>
+        </footer>
+    </div>
+    <%- typeof isGJSMFile !== 'undefined' ? isGJSMFile : ''; %>
+    <%- typeof isPJSMFile !== 'undefined' ? isPJSMFile : ''; %>
+</body>
+<%- include('./js'); %>
+</html>

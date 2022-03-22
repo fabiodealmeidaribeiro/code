@@ -1,0 +1,493 @@
+[
+    {
+        "title": "Conveniências",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis. Cras libero velit, tempus vel ultrices sit amet, sodales in est. Proin sed congue nibh, quis pulvinar lectus. Quisque et aliquam ipsum. Mauris pellentesque lacinia dui, euismod tempor odio ultrices eu. Ut sollicitudin euismod eros sit amet efficitur. Fusce rutrum nunc sed tempus tristique. Nulla feugiat tortor et tortor tincidunt varius. Suspendisse non lorem vehicula, cursus est eu, sollicitudin eros. Maecenas vel orci metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus at odio at metus lacinia scelerisque. Donec elementum tortor nisl, et cursus leo venenatis et. Praesent consectetur ut nunc nec ornare. Morbi vulputate sit amet ligula ut fermentum. Pellentesque mi est, posuere a ultrices nec, hendrerit varius magna.",
+        "image": "/images/i-0.jpg",
+        "items": [
+            {
+                "title": "Banheiro",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                "image": "/images/i-0.jpg",
+                "items": [
+                    {
+                        "title": "Chuveiro",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "title": "Papel higiênico",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "title": "Toalhas",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "title": "Vaso sanitário",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "title": "Roupa de banho",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "title": "Toalete",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "title": "Secador de cabelo",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Cozinha",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                "image": "/images/i-0.jpg",
+                "items": [
+                    {
+                        "title": "Cozinha compartilhada",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "title": "Fogão",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "title": "Produtos de limpeza",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "title": "Máquina de lavar roupas",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Quarto Família",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                "image": "/images/i-0.jpg",
+                "items": [
+                    {
+                        "title": "Roupa de cama",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "title": "Camas com tomadas de energia",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Segurança",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                "image": "/images/i-0.jpg",
+                "items": [
+                    {
+                        "title": "Câmeras de segurança",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "title": "Segurança 24h",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "title": "Extintores de incêncio",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "",
+                            "type": ""
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Proximidades",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis. Cras libero velit, tempus vel ultrices sit amet, sodales in est. Proin sed congue nibh, quis pulvinar lectus. Quisque et aliquam ipsum. Mauris pellentesque lacinia dui, euismod tempor odio ultrices eu. Ut sollicitudin euismod eros sit amet efficitur. Fusce rutrum nunc sed tempus tristique. Nulla feugiat tortor et tortor tincidunt varius. Suspendisse non lorem vehicula, cursus est eu, sollicitudin eros. Maecenas vel orci metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus at odio at metus lacinia scelerisque. Donec elementum tortor nisl, et cursus leo venenatis et. Praesent consectetur ut nunc nec ornare. Morbi vulputate sit amet ligula ut fermentum. Pellentesque mi est, posuere a ultrices nec, hendrerit varius magna.",
+        "image": "/images/i-0.jpg",
+        "items": [
+            {
+                "title": "O que há por perto?",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                "image": "/images/i-0.jpg",
+                "items": [
+                    {
+                        "title": "Teatro Ruth Escobar",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "",
+                        "number": {
+                            "value": "0,4",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Shopping Cidade São Paulo",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "",
+                        "number": {
+                            "value": "0,4",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Hospital Sírio-Libanês",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "0,5",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Teatro Gazeta",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "",
+                        "number": {
+                            "value": "0,5",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Fiesp - Federação das Indústrias do Estado de São Paulo",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "0,6",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Hospital 9 de Julho",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "0,6",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Maternidade Pro Matre Paulista",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "0,6",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "MASP - Museu de Arte de São Paulo",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "0,6",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Teatro Maria Della Costa",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "0,6",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Teatro Sergio Cardoso",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "0,7",
+                            "type": "km"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Principais atrações.",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                "image": "/images/i-0.jpg",
+                "items": [
+                    {
+                        "title": "Edifício Copan",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "1,7",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Catedral da Sé",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "1,9",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Mercado Municipal de São Paulo",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "2,9",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Museu Catavento",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "2,9",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Bienal de São Paulo - Pavilhão Ciccillo Matarazzo",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "3,1",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Sala São Paulo",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "3,1",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Pinacoteca",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "3,3",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Teatro Porto Seguro",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "3,4",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Allianz Parque",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "2,7",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Estádio do Canindé",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "5,4",
+                            "type": "km"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Restaurantes e Cafés.",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                "image": "/images/i-0.jpg",
+                "items": [
+                    {
+                        "title": "China Box",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "0,3",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Catzo Boteco Italiano",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "0,4",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Starbucks",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "0,5",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Shopping Cidade São Paulo",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "0,7",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Sesc Paulista",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "1,2",
+                            "type": "km"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Rodoviárias.",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                "image": "/images/i-0.jpg",
+                "items": [
+                    {
+                        "title": "Terminal Rodoviário Barra Funda",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "0,5",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Terminal Rodoviário Tietê",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "8,6",
+                            "type": "km"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Aeroportos.",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                "image": "/images/i-0.jpg",
+                "items": [
+                    {
+                        "title": "Aeroporto de São Paulo - Congonhas",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "7,5",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Aeroporto Internacional de São Paulo - Guarulhos",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "22,8",
+                            "type": "km"
+                        }
+                    },
+                    {
+                        "title": "Aeroporto Internacional de Viracopos - Campinas",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum augue mi, volutpat mollis dui sodales quis.",
+                        "image": "/images/i-0.jpg",
+                        "number": {
+                            "value": "79,1",
+                            "type": "km"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

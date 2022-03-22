@@ -1,0 +1,60 @@
+<%
+    array = [
+        {
+            href : '#',
+            title : 'Home',
+            icon : 'home',
+        },
+        {
+            href : '#',
+            title : 'User',
+            icon : 'people',
+        },
+        {
+            href : '#',
+            title : 'Messages',
+            icon : 'document',
+        },
+        {
+            href : '#',
+            title : 'Settings',
+            icon : 'settings',
+        },
+        {
+            href : '#',
+            title : 'Help',
+            icon : 'help',
+        },
+        {
+            href : '#',
+            title : 'Password',
+            icon : 'keypad',
+        },
+        {
+            href : '#',
+            title : 'Exit',
+            icon : 'exit',
+        },
+    ];
+%>
+<!--  -->
+<%- startTagName([ { name : 'div', param : { id : 'sidebar', }, }, ]); %>
+    <%- startTagName([ { name : 'div', param : { id : 'sidebar-navigation', class : [ 'bg-white', 'p-3', 'rounded', 'shadow-sm', ], }, }, ]); %>
+        <%- startTagName([ { name : 'div', param : { id : 'sidebar-content', class : [ 'rounded', 'shadow-sm', 'bg-light', 'w-100', 'h-100', ], }, }, ]); %>
+            <ul>
+                <% for (let i = 0; i < array['length']; i++) { %>
+                    <li id="sidebar-list" class="<%- !i ? 'active' : '' %>">
+                        <a href=<%- array[i]['href']; %>>
+                            <span id="sidebar-icon">
+                                <%- '<ion-icon name=\"' + array[i]['icon'] + '\"></ion-icon>'; %>
+                            </span>
+                            <span id="sidebar-title">
+                                <%- array[i]['title']; %>
+                            </span>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        <%- endTagName([ { name : 'div', }, ]); %>
+    <%- endTagName([ { name : 'div', }, ]); %>
+<%- endTagName([ { name : 'div', }, ]); %>
