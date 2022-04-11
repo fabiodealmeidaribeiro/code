@@ -1,23 +1,15 @@
-
 CREATE DATABASE htdocswordpresspuravidaofficial;
 CREATE DATABASE htdocswordpresspuravidalaboratory;
 
-
-CREATE DATABASE laboratory;
-
+CREATE DATABASE wordpresspuravida;
 
 CREATE DATABASE puravida;
 
-USE puravida;
-
-
+USE wordpresspuravida;
 
 DROP DATABASE phpmyadmin;
 
 DROP DATABASE test;
-
-
-
 
 DROP DATABASE test;
 DROP DATABASE phpmyadmin;
